@@ -1,0 +1,662 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+///////////////////////////////This///////////is///////// Color Veriables////////////////////////////////////////////
+$headerColor: #00CCFF;
+$footerColor:black;
+$textColor:white;
+$spanColor:gold;
+$coruselSpan:#D4A8C1;
+$coruselSpan2:#B3A3A1;
+$linerGardent1:#ee7752;
+$linerGardent2:#e73c7e;
+$linerGardent3:#23a6d5;
+$linerGardent4:#23d5ab;
+///////////////////////////////This///////////is///////// Color Veriables////////////////////////////////////////////
+
+
+
+////////////////////////////////This//////////is///////////// body//////////////////////////////////////////////////
+body {
+    background: linear-gradient(-45deg, $linerGardent1, $linerGardent2, $linerGardent3, $linerGardent4);
+    background-size: 1500% 1500%;
+    animation: gradient 15s ease infinite;
+    height: 100vh;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+////////////////////////////////This//////////is///////////// body//////////////////////////////////////////////////
+
+
+
+
+//////////////////////////////////This/////////is////////// Container///////////////////////////////////////////////
+.container {
+
+
+    ///////////////////////////////////This/////////is/////////Header///////////////////////////////////////////////
+    .header {
+        width: 100%;
+        height: 16vh;
+        background-color: $headerColor;
+        display: flex;
+
+        // Header Logo
+        .header-logo {
+            display: flex;
+            width: 20%;
+            padding: 1%;
+            cursor: pointer;
+
+            .header-logo1 {
+                width: 50%;
+            }
+
+            .header-logo-text {
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                margin-top: 5%;
+                margin-left: -5%;
+                font-size: 26px;
+            }
+        }
+
+        // Header Navs
+        .header-navs {
+            width: 50%;
+            display: flex;
+            margin-left: 30%;
+
+            .menu {
+                display: flex;
+                position: absolute;
+                margin-left: -21%;
+                margin-top: 2.2%;
+
+                a {
+                    margin-left: 50px;
+                    text-decoration: none;
+                    color: $footerColor;
+                    font-family: sans-serif;
+                    font-weight: 900;
+
+                    &:hover {
+                        color: $textColor;
+                        transition: 0.3s;
+                        border-bottom: 1px solid $spanColor;
+                    }
+                }
+
+            }
+
+            .btn1 {
+                margin-left: 80%;
+                margin-top: 2.5%;
+
+                .btnn1 {
+                    padding: 10px;
+                    background-color: $footerColor;
+                    color: $textColor;
+                    font-size: 30px;
+                    cursor: pointer;
+                    border-radius: 10px;
+                }
+            }
+        }
+    }
+    ///////////////////////////////////This/////////is/////////Header///////////////////////////////////////////////
+
+
+    ///////////////////////////////////This/////////is///////// Section Profil//////////////////////////////////////
+    .profil-section {
+        margin-top: 10vh;
+        display: flex;
+
+        .profil-title {
+            width: 40%;
+            margin-left: 10%;
+
+            .profil-text {
+                font-size: 50px;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                font-weight: 900;
+                margin-top: 4vh;
+
+                span {
+                    color: $spanColor;
+                }
+            }
+
+            .profil-dec {
+                font-family: sans-serif;
+                color: rgba(0, 0, 0, 0.479);
+                font-weight: 900;
+            }
+
+            .profil-title-btn {
+                text-decoration: none;
+                font-family: sans-serif;
+                color: $textColor;
+                background-color: $spanColor;
+                padding: 10px;
+                padding-left: 40px;
+                padding-right: 40px;
+                border-radius: 50px;
+            }
+
+            animation: profil 2.0s alternate-reverse both infinite;
+
+            @keyframes profil {
+                0% {
+                    transform: scale(0.95);
+                }
+
+                100% {
+                    transform: scale(1);
+                }
+            }
+        }
+
+        .profil-image {
+            width: 28%;
+            height: 28%;
+            border-radius: 50%;
+            margin-left: 5%;
+
+            .profil-img {
+                .profil-image1 {
+                    width: 100%;
+                    border-radius: 50%;
+
+                    &:hover {
+                        box-shadow: 0 0 30px $textColor;
+                        transform: rotate(10deg);
+                        transition: 0.9s;
+                    }
+                }
+            }
+        }
+    }
+    ///////////////////////////////////This/////////is///////// Section Profil//////////////////////////////////////
+    
+
+    ///////////////////////////////////This/////////is/////////header-corusel///////////////////////////////////////
+    .header-corusel {
+        width: 90%;
+        height: 74vh;
+        margin-left: 5%;
+        margin-top: 25vh;
+
+        //header-corusel1
+        .header-corusel1 {
+            display: flex;
+            padding: 30px;
+
+            img {
+                width: 50%;
+                border-radius: 20px;
+                animation: header-corusel1 2.0s alternate-reverse both infinite;
+
+                @keyframes header-corusel1 {
+                    0% {
+                        transform: scale(0.95);
+                    }
+
+                    100% {
+                        transform: scale(1);
+                    }
+                }
+
+            }
+
+            .corusel1-title {
+                padding: 20px;
+                font-family: Arial, Helvetica, sans-serif;
+                margin-top: 10vh;
+
+                span {
+                    color: $coruselSpan;
+                    text-shadow: 0 0 20px $footerColor;
+                }
+            }
+        }
+
+        //header-corusel2
+        .header-corusel2 {
+            display: flex;
+            padding: 30px;
+
+            img {
+                width: 50%;
+                border-radius: 20px;
+                animation: header-corusel2 2.0s alternate-reverse both infinite;
+
+                @keyframes header-corusel2 {
+                    0% {
+                        transform: scale(0.95);
+                    }
+
+                    100% {
+                        transform: scale(1);
+                    }
+                }
+            }
+
+            .corusel2-title {
+                margin-top: 10vh;
+                font-family: Arial, Helvetica, sans-serif;
+                padding: 20px;
+
+                span {
+                    color: $textColor;
+                    text-shadow: 0 0 20px $footerColor;
+                }
+            }
+        }
+
+        //header-corusel3
+        .header-corusel3 {
+            display: flex;
+            padding: 30px;
+
+            img {
+                width: 50%;
+                border-radius: 20px;
+                animation: header-corusel3 2.0s alternate-reverse both infinite;
+
+                @keyframes header-corusel3 {
+                    0% {
+                        transform: scale(0.95);
+                    }
+
+                    100% {
+                        transform: scale(1);
+                    }
+                }
+            }
+
+            .corusel3-title {
+                margin-top: 10vh;
+                font-family: Arial, Helvetica, sans-serif;
+                padding: 20px;
+
+                span {
+                    color: $coruselSpan2;
+                    text-shadow: 0 0 20px $footerColor;
+                }
+            }
+        }
+
+        //header-corusel4
+        .header-corusel4 {
+            display: flex;
+            padding: 30px;
+
+            img {
+                width: 50%;
+                border-radius: 20px;
+                animation: header-corusel4 2.0s alternate-reverse both infinite;
+
+                @keyframes header-corusel4 {
+                    0% {
+                        transform: scale(0.95);
+                    }
+
+                    100% {
+                        transform: scale(1);
+                    }
+                }
+            }
+
+            .corusel4-title {
+                margin-top: 10vh;
+                font-family: Arial, Helvetica, sans-serif;
+                padding: 40px;
+
+                span {
+                    color: $footerColor;
+                    text-shadow: 0 0 20px $footerColor;
+                }
+            }
+        }
+    }
+    ///////////////////////////////////This/////////is/////////header-corusel///////////////////////////////////////
+
+
+    //////////////////////////////////This//////////is/////////popular-games///////////////////////////////////////
+    .popular-games {
+        margin-top: 10vh;
+
+        .popular-games-bar {
+            text-decoration: none;
+            .pg-title {
+                text-align: center;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                color: $textColor;
+                text-decoration: none;
+            }
+
+            .pg-bar {
+                width: 80%;
+                margin-left: 10%;
+                display: grid;
+                grid-template-columns: repeat(auto-fit,minmax(200px,0.5fr));
+                grid-gap:0px;
+                margin-top: 10vh;
+                .popular-games-card1 {
+                    width: 60%;
+                    height: 40vh;
+                    background: linear-gradient($linerGardent1, $linerGardent2);
+                    border-top-right-radius: 20px;
+                    border-top-left-radius: 20px;
+                    border-bottom-right-radius: 20px;
+                    border-bottom-left-radius: 20px;
+                    border: 1px solid $linerGardent3;
+                    margin-left: 19%;
+                    animation: games 3.0s alternate-reverse both infinite;
+                    
+
+                @keyframes games {
+                    0% {
+                        transform: translate(0);
+                    }
+                    50% {
+                        transform: translateY(20px);
+                    }
+                    100% {
+                        transform: translate(0);
+                    }
+                }
+                    &:hover{
+                        transform: scale(1.1);
+                        transition: 0.9s;
+                        box-shadow: 0 0 25px $footerColor;
+                    }
+
+                    .pg-card1-img {
+                        width: 100%;
+                        border-top-right-radius: 20px;
+                        border-top-left-radius: 20px;
+                    }
+                    .pg-card1-text{
+                        text-align: center;
+                        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                    }
+                }
+            }
+        }
+    }
+    //////////////////////////////////This//////////is/////////popular-games///////////////////////////////////////
+
+
+    /////////////////////////////////This///////////is///////// Videos ////////////////////////////////////////////
+    .videos1{
+        margin-top: 15vh;
+        .videos-title{
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            color: $textColor;
+            margin-left: 5%;
+            text-align: center;
+        }
+        .videos-text{
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            color: $textColor;
+            margin-left: 5%;
+            margin-top: 5vh;
+        }
+        .videos-bar{
+            width: 90%;
+            margin-top: 5vh;
+        }
+    }
+    /////////////////////////////////This///////////is///////// Videos ////////////////////////////////////////////
+
+
+    ////////////////////////////////This////////////is/////////Videos 2////////////////////////////////////////////
+    .videos2{
+        margin-top: 10vh;
+        .videos2-title{
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            color: $textColor;
+            margin-left: 5%;
+            margin-top: 5vh;
+        }
+        .video2-bar{
+            width: 90%;
+            margin-top: 5vh;
+        }
+    }
+    ////////////////////////////////This////////////is/////////Videos 2////////////////////////////////////////////
+
+
+    ////////////////////////////////This////////////is/////////videos3////////////////////////////////////////////
+    .videos3{
+        margin-top: 10vh;
+        .videos3-title{
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            color: $textColor;
+            margin-left: 5%;
+            margin-top: 5vh;
+        }
+        .videos3-bar{
+            width: 90%;
+            margin-top: 5vh;
+        }
+    }
+    ////////////////////////////////This////////////is/////////videos3////////////////////////////////////////////
+     
+
+    ////////////////////////////////This///////////is//////////videos4/////////////////////////////////////////////
+    .videos4{
+        margin-top: 10vh;
+        .videos4-title{
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            color: $textColor;
+            margin-left: 5%;
+            margin-top: 5vh;
+        }
+        .videos4-bar{
+            width: 90%;
+            margin-top: 5vh;
+        }
+    }
+    ////////////////////////////////This///////////is//////////videos4/////////////////////////////////////////////
+
+
+    ////////////////////////////////This///////////is//////////mrbeast-food////////////////////////////////////////
+    .mrbeast-food{
+        margin-top: 30vh;
+        .mb-food-title{
+                color: $textColor;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                text-align: center;
+            }
+        .mrbeast-food-bar{
+            width: 90%;
+            justify-content: center;
+            margin-left: 5%;
+            margin-top: 10vh;
+            display: flex;
+            .mr-food-text-bar{
+                width: 50%;
+                margin-top: 0vh;
+                h1{
+                    color: $textColor;
+                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                }
+                p{
+                    color: $textColor;
+                    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                    line-height: 35px;
+                    font-size: 20px;
+                }
+                .mr-food-btn{
+                    text-decoration: none;
+                    color: $footerColor;
+                    background: linear-gradient(-45deg, $linerGardent1, $linerGardent2, $linerGardent3, $linerGardent4);
+                    padding: 20px;
+                    padding-left: 70px;
+                    padding-right: 70px;
+                    border-radius: 50px;
+                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                    &:hover{
+                        box-shadow: 0 0 25px  $footerColor;
+                        transition: 0.8s;
+                    }
+                }
+            }
+            .mr-food-img-bar{
+                animation: mr-food-img 2.0s alternate-reverse both infinite;
+
+                @keyframes mr-food-img {
+                    0% {
+                        transform: scale(0.95);
+                    }
+
+                    100% {
+                        transform: scale(1);
+                    }
+                }
+            }
+            
+        }
+    }
+    ////////////////////////////////This///////////is//////////mrbeast-food////////////////////////////////////////
+
+
+    ////////////////////////////////This//////////is///////////about///////////////////////////////////////////////
+    .about{
+        margin-top: 35vh;
+        .about-title{
+            text-align: center;
+            color: $textColor;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .about-bar{
+            display: flex;
+            .about-bar-title{
+                width: 50%;
+                margin-left: 10%;
+                margin-top: 10vh;
+                h1{
+                    color: $textColor;
+                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                }
+                p{
+                    margin-top: 2vh;
+                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                    line-height: 30px;
+                    color: $textColor;
+                }
+            }
+            .about-bar-img{
+                margin-top: 23vh;
+                margin-left: 1%;
+                animation: about 3.0s alternate-reverse both infinite;
+
+                @keyframes about {
+                    0% {
+                        transform: translate(0);
+                    }
+                    50% {
+                        transform: translateY(20px);
+                    }
+                    100% {
+                        transform: translate(0);
+                    }
+                }
+                img{
+                    width: 60%;
+                    margin-left: 20%;
+                    border-radius: 15px;
+                    &:hover{
+                        transform: scale(1.1);
+                        transition: 0.7s;
+                        box-shadow: 0 0 20px $footerColor;
+                    }
+                }
+            }
+        }
+    }
+    ////////////////////////////////This//////////is///////////about///////////////////////////////////////////////
+
+
+    ///////////////////////////////This//////////is//////////// Footer////////////////////////////////////////////
+    .footer{
+        width: 100%;
+        height: 70vh;
+        background-color: $footerColor;
+        margin-top: 20vh;
+        .footer-bar{
+            margin: 5%;
+            padding-top: 5vh;
+            .footer-logo{
+                .footer-logo-text{
+                    color: $headerColor;
+                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                    a{
+                        text-decoration: none;
+                        color: $headerColor;
+                    }
+                }
+                .footer-lorem{
+                    width: 30%;
+                    color: $textColor;
+                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                    margin-top: 5vh;
+                }
+            }
+            .footer-navs{
+                display: flex;
+                margin-left: 30%;
+                margin-top: -20vh;
+                a{
+                    text-decoration: none;
+                    color: $textColor;
+                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                    margin-left: 70px;
+                    &:hover{
+                        color: $headerColor;
+                        text-shadow: 0 0 20px $headerColor;
+                    }
+                }
+            }
+            .footer-social{
+                margin-left: 35%;
+                margin-top: 13vh;
+                i{
+                    color: $textColor;
+                    font-size: 25px;
+                    margin-left: 80px;
+                    &:hover{
+                        text-shadow: 0 0 25px $headerColor;
+                    color: $headerColor;
+                    cursor: pointer;
+                    }
+                }
+            }
+            .footer-text{
+                color: $textColor;
+                text-align: center;
+            }
+        }
+    }
+    ///////////////////////////////This//////////is//////////// Footer////////////////////////////////////////////
+    
+
+}
+//////////////////////////////////This/////////is////////// Container///////////////////////////////////////////////
